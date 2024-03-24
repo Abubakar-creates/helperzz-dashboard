@@ -175,7 +175,7 @@ const Home = () => {
       <div className="flex mt-4 m-auto gap-8">
         <div className="w-[40%] rounded-md shadow-md p-4 bg-white">
           <div className="flex align-center items-center gap-6">
-            <h1 className="text-[2rem] text-gray-600 font-[500]">$9,568</h1>
+            <h1 className="text-[2rem] text-gray-600 font-[500]">$9,564</h1>
             <button className="bg-[#FC185A1A] flex gap-2 items-center text-[#FC185A] px-2 rounded-lg py-[2px] text-[14px]">
               <FaArrowDown size={15} color="#FC185A" />
               8.6%
