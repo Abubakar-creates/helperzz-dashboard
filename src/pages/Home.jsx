@@ -170,10 +170,10 @@ const Home = () => {
   const [range, setRange] = useState(5);
 
   return (
-    <div className="bg-gray-100 p-20">
+    <div className="bg-gray-100 p-20 max-md:p-6">
       <h1 className="text-[1.5rem] text-gray-700 font-[500]">Dashboard</h1>
-      <div className="flex mt-4 m-auto gap-8">
-        <div className="w-[40%] rounded-md shadow-md p-4 bg-white">
+      <div className="flex mt-4 m-auto gap-8 max-md:flex-col">
+        <div className="w-[40%] max-md:w-[98%] max-md:m-auto rounded-md shadow-md p-4 bg-white">
           <div className="flex align-center items-center gap-6">
             <h1 className="text-[2rem] text-gray-600 font-[500]">$9,564</h1>
             <button className="bg-[#FC185A1A] flex gap-2 items-center text-[#FC185A] px-2 rounded-lg py-[2px] text-[14px]">
@@ -214,7 +214,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-4 w-[60%] bg-white rounded-xl shadow-md p-4 ">
+        <div className="grid grid-cols-4 w-[60%] max-md:w-[98%] max-md:m-auto max-md:grid-cols-2 max-md:gap-4 bg-white rounded-xl shadow-md p-4 ">
           <div className="flex flex-col border-r-2 items-center justify-center">
             <IoMdCart
               size={48}
@@ -268,9 +268,9 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="flex gap-8 mt-4">
-        <div className="w-[40%]">
-          <div className="grid grid-cols-2 gap-2 justify-between">
+      <div className="flex gap-8 mt-4 max-md:flex-col">
+        <div className="w-[40%] max-md:w-[98%] max-md:m-auto">
+          <div className="grid grid-cols-2 max-md:grid-cols-1 gap-2 justify-between">
             <div className=" border-2 rounded-md shadow-md p-4 bg-white">
               <h1 className="text-[2rem] text-gray-600 font-[500]">$9,568</h1>
 
@@ -318,7 +318,7 @@ const Home = () => {
                     />
                   </RadialBarChart>
 
-                  <h1 className=" mt-[-6rem] ml-[38%] text-[1.3rem] font-[600] text-gray-400">
+                  <h1 className=" mt-[-6rem] ml-[38%] max-md:ml-[43%] text-[1.3rem] font-[600] text-gray-400">
                     78%
                   </h1>
                 </ResponsiveContainer>
@@ -355,7 +355,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="bg-white p-4 rounded-xl shadow-md w-[60%]">
+        <div className="bg-white p-4 rounded-xl shadow-md w-[60%] max-md:w-[98%] max-md:m-auto">
           <div className="flex justify-between">
             <h1 className="font-[600] text-[19px] text-gray-700">
               Sales & Views
@@ -373,8 +373,8 @@ const Home = () => {
               <Bar dataKey="Sales" fill="#16DBCC" radius={20} />
             </BarChart>
           </ResponsiveContainer>
-          <div className="grid grid-cols-2 justify-between border-[1px] rounded-xl border-gray-400 m-2 p-4">
-            <div className="flex border-r-[1px] border-gray-400 gap-4 align-center items-center">
+          <div className="grid grid-cols-2 max-md:grid-cols-1 max-md:m-auto  border-[1px] rounded-xl border-gray-400 m-2 p-4 max-md:mt-6">
+            <div className="flex border-r-[1px] max-md:border-b-[1px] max-md:border-r-[0px] max-md:pb-4 max-md:m-auto border-gray-400 gap-4 align-center items-center">
               <div className="">
                 <ResponsiveContainer width={120} height={100}>
                   <PieChart>
@@ -408,7 +408,7 @@ const Home = () => {
                 </h1>
               </div>
             </div>
-            <div className="flex ml-auto gap-4 align-center items-center">
+            <div className="flex ml-auto gap-4 align-center items-center max-md:mr-auto max-md:mt-4">
               <div className="">
                 <ResponsiveContainer width={120} height={100}>
                   <PieChart>
@@ -446,7 +446,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-6 mt-6">
+      <div className="grid grid-cols-3 max-md:grid-cols-1 max-md:w-[98%] max-md:m-auto max-md:mt-10 gap-6 mt-6">
         <div className="bg-white p-4 rounded-xl shadow-md">
           <div className="flex justify-between items-center pr-2 mb-4">
             <h1 className="font-[600] text-[20px] text-gray-700">
@@ -524,23 +524,23 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div className="bg-white shadow-md rounded-xl p-4 mt-6">
+      <div className="bg-white shadow-md rounded-xl p-4 mt-6 max-md:w-[98%] max-md:m-auto max-md:mt-10">
         <h1 className="font-[600] text-[20px] text-gray-700">Popular Services</h1>
         {services?.map((value, index) => (
             <div
               key={index}
               className="flex justify-center gap-[10px] items-center mt-2 p-2"
             >
-              <img src={value?.url} alt="" className="h-20 w-26 rounded-xl" />
+              <img src={value?.url} alt="" className="h-20 max-md:h-14 w-26 max-md:w-20 rounded-xl" />
               <div className="flex flex-col ">
-                <h1 className="font-[500] text-gray-500 text-[16px]">
+                <h1 className="font-[500] text-gray-500 text-[16px] max-md:text-[14px]">
                   {value?.name}
                 </h1>
-                <h1 className="font-[400] text-gray-500 text-[13px]">
+                <h1 className="font-[400] text-gray-500 text-[13px] max-md:text-[12px]">
                   {value?.detail}
                 </h1>
               </div>
-              <h1 className="font-[500] text-gray-500 text-[16px] ml-auto">
+              <h1 className="font-[500] text-gray-500 text-[16px] ml-auto max-md:text-center">
                 {value?.client} clients
               </h1>
             </div>
